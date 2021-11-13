@@ -12,9 +12,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
 	rel="stylesheet">
 <style>
-h1 {
-	font-family: 'Gugi', cursive;
-}
+	h1 {
+		font-family: 'Gugi', cursive;
+	}
 </style>
 <title>개발문고</title>
 </head>
@@ -22,9 +22,10 @@ h1 {
 	<%@ include file="header.jsp"%>
 
 	<%!String greeting = "개발문고";
-	String tagline = "<br>지금 바로 신착 도서들을 둘러 보세요.<br><br><br><br>";%>
+	String tagline = "<br>엄선한 IT 기술 서적들을 둘러보세요.<br><br><br><br>";%>
 
 	<div class="jumbotron bg-warning">
+		<!-- bg-primary text-light -->
 		<div class="container">
 			<h1 class="display-2 text-center">
 				<%=greeting%>
@@ -35,7 +36,7 @@ h1 {
 		<div class="text-center">
 			<h4><%=tagline%></h4>
 			<%
-			response.setIntHeader("Refresh", 5);
+			response.setIntHeader("Refresh", 10);
 			Date day = new java.util.Date();
 			String am_pm;
 			int hour = day.getHours();

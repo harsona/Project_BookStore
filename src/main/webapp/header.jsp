@@ -5,12 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>header.jsp</title>
-<style>
-<
-</style>
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top bg-dark">
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="./welcome.jsp">HOME</a>
