@@ -8,7 +8,14 @@ import dto.Book;
 public class BookRepository {
 
 	private ArrayList<Book> listOfBooks = new ArrayList<Book>();
-
+	
+//5. BookRepository 클래스의 기본생성자에 대한 객체변수 instance와 Getter() 메소드 작성	
+	private static BookRepository instance = new BookRepository(); 
+	
+	public static BookRepository getInstance() {
+		return instance;
+	}
+	
 //2. 메인에 표시할 책 3권 등록해보기 (bookId, bName, bPrice)
 	public BookRepository() { 
 
@@ -43,6 +50,7 @@ public class BookRepository {
 		listOfBooks.add(Book2);
 		listOfBooks.add(Book3);
 	}
+	
 //3. 변수 listOfBooks에 저장된 도서목록을 가져오는 getAllBooks() 메소드 작성
 	public ArrayList<Book> getAllBooks() {
 		return listOfBooks;
@@ -60,5 +68,10 @@ public class BookRepository {
 			}
 		} 
 		return bookById;
+	}
+	
+//6. 객체 변수 listOfBooks에 새로운 도서 정보를 등록하는 addBook()메소드 작성
+	public void addBook(Book book) {
+		listOfBooks.add(book);
 	}
 }

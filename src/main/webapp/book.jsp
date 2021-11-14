@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="dto.Book"%>
-<jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" />
+<%@ page import="dao.BookRepository"%>
+<!-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,12 +20,15 @@
 	<jsp:include page="header.jsp" />
 	<div class="jumbotron bg-warning text-light">
 		<div class="container">
-			<h1 class="display-5">도서 상세 정보</h1>
+			<h1 class="display-4">도서 상세 정보</h1>
 		</div>
 	</div>
-	<% /////////////////////////////////////이 부분 왜 bookId가 아닌지 짚고 넘어갈것
-	String id = request.getParameter("id");
-	Book book = bookDAO.getBookById(id);
+	<% 
+		String id = request.getParameter("id");
+		//Book book = bookDAO.getBookById(id);
+		BookRepository dao = BookRepository.getInstance();
+		Book book = dao.getBookById(id);
+		//Book 객체 타입의 변수 book에 getBookById() 반환결과값을 저장
 	%>
 	<div class="container">
 		<div class="row">
@@ -37,9 +41,9 @@
 				<p><b>분류</b> : <%=book.getCategory()%>
 				<p><b>재고수</b> : <%=book.getbInStock()%>
 				<p><b>출판일</b> : <%=book.getReleaseDate()%>
-				<h4><%=book.getbPrice()%>원</h4>
+				<h4><%=book.getbPrice()%>원</h4><br>
 				<p><a href="#" class="btn btn-warning">도서 주문 &raquo;</a>
-				<a href=".books.jsp" class="btn btn-dark">도서 목록 &raquo;</a>
+				<a href="./books.jsp" class="btn btn-dark">도서 목록 &raquo;</a>
 			</div>
 		</div>
 		<hr>

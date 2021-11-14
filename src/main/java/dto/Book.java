@@ -6,10 +6,10 @@ public class Book {
 	private String bName;		//2.도서명
 	private Integer bPrice;		//3.가격
 	private String author;		//4.저자
-	private String description; //5.설명
+	private String description; //5.상세정보
 	private String publisher;   //6.출판사
 	private String category;	//7.분류
-	private long bInStock;		//8.재고 수
+	private long bInStock;		//8.재고수
 	private String releaseDate; //9.출판일
 	private String bType; 		//10.타입(Paper, Ebook)
 

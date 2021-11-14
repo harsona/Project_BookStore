@@ -2,7 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Book"%>
-<jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" />
+<%@ page import="dao.BookRepository"%> 
+<!-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +26,9 @@
 		</div>
 	</div>
 	<%
-	ArrayList<Book> listOfBooks = bookDAO.getAllBooks();
+		//ArrayList<Book> listOfBooks = bookDAO.getAllBooks(); 
+		BookRepository dao = BookRepository.getInstance();
+		ArrayList<Book> listOfBooks = dao.getAllBooks();
 	%>
 	<div class="container">
 		<div class="row" align="center">
