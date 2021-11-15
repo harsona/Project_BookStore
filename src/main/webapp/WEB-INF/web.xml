@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>Project_Bookstore</display-name>
+  <display-name>Project_BookStore</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,4 +9,30 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
+  <security-role> <!-- 1. 시큐리티 역할 설정-->
+    <description></description>
+    <role-name>admin</role-name>
+  </security-role>
+
+  <security-constraint> <!-- 2. 시큐리티 제약 사항 설정 -->
+    <display-name>BookStore Security</display-name>
+    <web-resource-collection>
+      <web-resource-name>BookStore</web-resource-name>
+      <description></description>
+      <url-pattern>/addBook.jsp</url-pattern> <!-- 접근을 제한할 요청경로 -->
+    </web-resource-collection>
+    <auth-constraint>
+      <description>권한 관리자명</description>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <login-config> <!-- 3. 시큐리티 인증 설정-->
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login.jsp</form-login-page>
+      <form-error-page>/login_failed.jsp</form-error-page>
+    </form-login-config>
+  </login-config>
 </web-app>

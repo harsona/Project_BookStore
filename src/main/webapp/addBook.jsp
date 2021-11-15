@@ -15,14 +15,15 @@
 	<fmt:bundle basename="bundle.message"> 
 	<jsp:include page="header.jsp" />
 	<div class="jumbotron bg-warning text-light">
-		<div class="container"> <!-- title=신규 도서 등록 (message.properties에서 설정해놈) -->
+		<div class="container"> <!-- title=신규 도서 등록 (message.properties에서 설정) -->
 			<h1 class="display-4"><fmt:message key="title"/></h1> 
 		</div>
 	</div>
 	<div class="container">
-		<!-- 다국어 설정 링크 <fmt:message key="..."/>으로 변경 -->
+<!-- 다국어 설정 및 로그인 링크 <fmt:message key="..."/>으로 변경 -->
 		<div class="text-right">
-			<a href="?language=ko">Korean</a> | <a href="?language=en">English</a>
+			<a href="?language=ko">Korean</a> | <a href="?language=en">English</a><br><br>
+			<a href="logout.jsp" class="btn btn-sm btn-Default pull-right">logout</a>
 		</div>
 		
 		<form name="newBook" action="./processAddBook.jsp" class="form-horizontal" method="post" enctype="">
