@@ -12,7 +12,7 @@
 </head>
 <body>
 	<fmt:setLocale value='<%= request.getParameter("language") %>'/>
-	<fmt:bundle basename="resourceBundle.message"> 
+	<fmt:bundle basename="bundle.message"> 
 	<jsp:include page="header.jsp" />
 	<div class="jumbotron bg-warning text-light">
 		<div class="container"> <!-- title=신규 도서 등록 (message.properties에서 설정해놈) -->
