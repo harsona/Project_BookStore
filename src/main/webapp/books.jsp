@@ -3,18 +3,13 @@
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Book"%>
 <%@ page import="dao.BookRepository"%> 
-<!-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> -->
+<!-- jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" / -->
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-<style>
-	h1 {
-		font-family: 'Do Hyeon', sans-serif;
-	}
-</style>
+<style>	h1 { font-family: 'Do Hyeon', sans-serif;} </style>
 <title>도서 목록</title>
 </head>
 <body>
@@ -37,13 +32,12 @@
 				Book book = listOfBooks.get(i);
 			%>
 			<div class="col-md-4">
+				<img src="./resources/images/<%=book.getFilename()%>" style="width:50%"/><br><br>
 				<h4><b><%=book.getbName()%></b></h4>
 				<br>
 				<p><%=book.getDescription()%>
 				<p><%=book.getbPrice()%>원
-				<p>
-					<a href="./book.jsp?id=<%=book.getBookId()%>"
-						class="btn btn-warning" role="button">상세 정보 &raquo;</a>
+				<p><a href="./book.jsp?id=<%=book.getBookId()%>" class="btn btn-warning" role="button">상세 정보 &raquo;</a>
 				<hr>
 			</div>
 			<%

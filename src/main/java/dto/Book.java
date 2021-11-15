@@ -12,6 +12,7 @@ public class Book {
 	private long bInStock;		//8.재고수
 	private String releaseDate; //9.출판일
 	private String bType; 		//10.타입(Paper, Ebook)
+	private String filename;     //11.이미지 파일명
 
 //2. 기본 생성자 작성하기
 	public Book() {
@@ -85,5 +86,11 @@ public class Book {
 	}
 	public void setbType(String bType) {
 		this.bType = bType;
+	}
+	public String getFilename() {
+		return filename;
+	}
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 }
