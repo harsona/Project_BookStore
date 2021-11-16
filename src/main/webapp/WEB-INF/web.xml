@@ -45,4 +45,14 @@
 	<location>/exceptionNoPage.jsp</location>>
   </error-page>
 
+<!-- 5. 필터 처리를 이용해 로그 기록하기 -->
+  <filter>
+	<filter-name>LogFilter</filter-name>
+	<filter-class>filter.LogFilter</filter-class>
+  </filter>
+  <filter-mapping>
+	<filter-name>LogFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+
 </web-app>

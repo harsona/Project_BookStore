@@ -17,7 +17,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<p><%=request.getRequestURL()%>/<%=request.getQueryString()%><br><br><br></p>
+		<p><%=request.getRequestURL()%>?<%=request.getQueryString()%><br><br><br></p>
 		<p><a href="books.jsp" class="btn btn-dark pull-right"> 도서 목록 페이지로 돌아가기 &raquo;</a></p>
 	</div>
 </body>
