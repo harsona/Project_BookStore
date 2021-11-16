@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>Project_BookStore</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -10,12 +10,14 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
 
-  <security-role> <!-- 1. 시큐리티 역할 설정-->
+<!-- 1. 시큐리티 역할 설정-->
+  <security-role> 
     <description></description>
     <role-name>admin</role-name>
   </security-role>
 
-  <security-constraint> <!-- 2. 시큐리티 제약 사항 설정 -->
+<!-- 2. 시큐리티 제약 사항 설정 -->
+  <security-constraint> 
     <display-name>BookStore Security</display-name>
     <web-resource-collection>
       <web-resource-name>BookStore</web-resource-name>
@@ -28,11 +30,19 @@
     </auth-constraint>
   </security-constraint>
 
-  <login-config> <!-- 3. 시큐리티 인증 설정-->
+<!-- 3. 시큐리티 인증 설정-->
+  <login-config> 
     <auth-method>FORM</auth-method>
     <form-login-config>
       <form-login-page>/login.jsp</form-login-page>
       <form-error-page>/login_failed.jsp</form-error-page>
     </form-login-config>
   </login-config>
+
+<!-- 4. 오류가 발생했을 때 exceptionNoPage.jsp를 호출하도록 코드 작성-->
+  <error-page> 
+	<error-code>404</error-code>
+	<location>/exceptionNoPage.jsp</location>>
+  </error-page>
+
 </web-app>

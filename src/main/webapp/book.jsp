@@ -8,7 +8,6 @@
 <head>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-<style> h1 { font-family: 'Do Hyeon', sans-serif; }</style>
 <title>도서 상세 정보</title>
 </head>
 <body>

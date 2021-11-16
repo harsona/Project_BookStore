@@ -5,14 +5,14 @@
 <head>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-<style>	h2 {font-family: 'Do Hyeon', sans-serif;}</style>
+<style>	h3 {font-family: 'Do Hyeon', sans-serif;}</style>
 <title>로그인</title>
 </head>
 <body>
 	<jsp:include page="header.jsp" />
 	<div class="jumbotron bg-warning">
 		<div class="container">
-			<h2 class="display-3">로그인 페이지</h2>
+			<h3 class="display-3">로그인 페이지</h3>
 		</div>
 	</div>
 	<div class="container" align="center">

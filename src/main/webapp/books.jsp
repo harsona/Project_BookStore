@@ -4,6 +4,7 @@
 <%@ page import="dto.Book"%>
 <%@ page import="dao.BookRepository"%> 
 <!-- jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" / -->
+<%@ page errorPage="exceptionNoBookId.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>

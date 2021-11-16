@@ -23,7 +23,7 @@
 <!-- 다국어 설정 및 로그인 링크 <fmt:message key="..."/>으로 변경 -->
 		<div class="text-right">
 			<a href="?language=ko">Korean</a> | <a href="?language=en">English</a><br><br>
-			<a href="logout.jsp" class="btn btn-sm btn-Default pull-right">logout</a>
+			<a href="logout.jsp" class="btn btn-sm btn-warning pull-right text-light">logout</a>
 		</div>
 		
 		<form name="newBook" action="./processAddBook.jsp" class="form-horizontal" method="post" enctype="">
