@@ -12,7 +12,8 @@ public class Book {
 	private long bInStock;		//8.재고수
 	private String releaseDate; //9.출판일
 	private String bType; 		//10.타입(Paper, Ebook)
-	private String filename;     //11.이미지 파일명
+	private String filename;    //11.이미지 파일명
+	private int quantity;		//12.장바구니에 담은 갯수
 
 //2. 기본 생성자 작성하기
 	public Book() {
@@ -93,4 +94,11 @@ public class Book {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
 }

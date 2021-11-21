@@ -37,9 +37,8 @@
 				<h4><b><%=book.getbName()%></b></h4>
 				<br>
 				<p><%=book.getDescription()%>
-				<p><%=book.getbPrice()%>원
+				<p><h5><%=book.getbPrice()%>원</h5><br>
 				<p><a href="./book.jsp?id=<%=book.getBookId()%>" class="btn btn-warning" role="button">상세 정보 &raquo;</a>
-				<hr>
 			</div>
 			<%
 			}

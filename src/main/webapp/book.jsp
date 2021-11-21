@@ -9,6 +9,15 @@
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 <title>도서 상세 정보</title>
+<script type="text/javascript"> //자바스크립트로 핸들러함수 addToCart() 작성 추가
+	function addToCart() {
+		if (comfirm("상품을 장바구니에 추가하시겠습니까?")){
+			document.addForm.submit(); //확인을 클릭하면 아래 addForm()이 실행
+		} else {
+			document.addForm.reset();
+		}
+	}
+</script>
 </head>
 <body>
 	<jsp:include page="header.jsp" />
@@ -39,11 +48,14 @@
 				<p><b>재고수</b> : <%=book.getbInStock()%>
 				<p><b>출판일</b> : <%=book.getReleaseDate()%>
 				<h4><%=book.getbPrice()%>원</h4><br>
-				<p><a href="#" class="btn btn-warning">도서 주문 &raquo;</a>&nbsp;&nbsp;
-				<a href="./books.jsp" class="btn btn-dark">도서 목록 &raquo;</a>
+				<p><form name="addForm" action="./addCart.jsp?id=<%=book.getBookId()%>" method="post">
+					<!-- 도서 주문을 클릭하면 상단의 핸들러함수 addToCart()가 실행 -->
+				    <a href="#" class="btn btn-success" onclick="addToCart()">도서 주문 &raquo;</a>&nbsp;&nbsp;
+				    <a href="./cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>&nbsp;&nbsp;				     
+	  				<a href="./books.jsp" class="btn btn-secondary">도서 목록 &raquo;</a>
+				</form>
 			</div>
 		</div>
-		<hr>
 	</div>
 	<jsp:include page="footer.jsp" />
 </body>

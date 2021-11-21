@@ -20,7 +20,7 @@ public class BookRepository {
 	public BookRepository() { 
 
 		Book book1 = new Book("b9791157675807", "정보처리기사 실기", 33000); 
-		book1.setDescription("정보처리기사 필기 합격,<br>2022년 5월 실기 응시 예정");
+		book1.setDescription("정보처리기사 필기 합격<br>2022년 4월 실기 응시 예정");
 		book1.setAuthor("NCS 정보처리기술사 연구회");
 		book1.setPublisher("건기원");
 		book1.setCategory("컴퓨터/IT");
@@ -30,7 +30,7 @@ public class BookRepository {
 		book1.setFilename("b9791157675807.png");
 
 		Book book2 = new Book("b9788988474846", "SQL 자격검정 실전문제", 18000);
-		book2.setDescription("2021년 11월 20일 응시");
+		book2.setDescription("2021년 11월 20일 응시<br>12월 17일 결과 발표");
 		book2.setAuthor("한국데이타베이스진흥원");
 		book2.setPublisher("한국데이터진흥원");
 		book2.setCategory("컴퓨터/IT");
@@ -40,7 +40,7 @@ public class BookRepository {
 		book2.setFilename("b9788988474846.png");
 
 		Book book3 = new Book("b9788931462326", "리눅스마스터 2급 기본서", 25000);
-		book3.setDescription("2021년 12월 11일 응시");
+		book3.setDescription("2021년 12월 11일 응시<br>12월 31일 결과 발표");
 		book3.setAuthor("권소라");
 		book3.setPublisher("영진닷컴");
 		book3.setCategory("컴퓨터/IT");
