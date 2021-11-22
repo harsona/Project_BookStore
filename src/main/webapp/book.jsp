@@ -49,10 +49,10 @@
 				<p><b>출판일</b> : <%=book.getReleaseDate()%>
 				<h4><%=book.getbPrice()%>원</h4><br>
 				
-				<p><form name="addForm" action="./addCart.jsp?id=<%=book.getBookId()%>" method="post">&nbsp;&nbsp;
+				<p><form name="addForm" action="./addCart.jsp?id=<%=book.getBookId()%>" method="post">
 					<!-- 도서 주문을 클릭하면 상단의 핸들러함수 addToCart()가 실행 -->
 					<a href="#" class="btn btn-success" onclick="addToCart()"> 도서 주문 &raquo;</a>&nbsp;&nbsp; 
-					<a href="./cart.jsp" class="btn btn-warning"> 장바구니 &raquo;</a>
+					<a href="./cart.jsp" class="btn btn-warning"> 장바구니 &raquo;</a>&nbsp;&nbsp;
 					<a href="./books.jsp" class="btn btn-secondary"> 도서 목록 &raquo;</a>
 				</form>
 			</div>

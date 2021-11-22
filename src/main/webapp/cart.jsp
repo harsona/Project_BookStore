@@ -17,7 +17,7 @@
 </head>
 <body>
 	<jsp:include page="header.jsp" />
-	<div class="jumbotron bg-warning"">
+	<div class="jumbotron bg-warning">
 		<div class="container">
 			<h1 class="display-3">장바구니</h1>
 		</div>
@@ -26,8 +26,8 @@
 		<div class="row">
 			<table width="100%">
 				<tr>
-					<td align="left"><a href="./deleteCart.jsp?cartId=<%=cartId%>" class="btn btn-danger">삭제하기</a></td>
-					<td align="right"><a href="#" class="btn btn-success">주문하기</a></td>
+					<td align="left"><a href="./deleteCart.jsp?cartId=<%=cartId%>" class="btn btn-secondary">장바구니 비우기</a></td>
+					<td align="right"><a href="./shippingInfo.jsp?cartId=<%=cartId%>" class="btn btn-success">주문하기</a></td>
 				</tr>
 			</table>
 		</div>
@@ -52,7 +52,7 @@
 						sum = sum + total;
 				%>
 				<tr>
-					<td><%=book.getBookId()%> - <%=book.getbName()%></td>
+					<td><%=book.getbName()%>&nbsp;&nbsp;<span class="badge badge-warning"><%=book.getBookId()%></span></td>
 					<td><%=book.getbPrice()%></td>
 					<td><%=book.getQuantity()%></td>
 					<td><%=total%></td>
@@ -65,7 +65,7 @@
 					<th></th>
 					<th></th>
 					<th>총액</th>
-					<th><%=sum%></th>
+					<th><%=sum%> 원</th>
 					<th></th>
 				</tr>
 			</table>
