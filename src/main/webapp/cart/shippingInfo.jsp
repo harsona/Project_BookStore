@@ -3,13 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
-<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-<style>	h1 { font-family: 'Do Hyeon', sans-serif;} </style>
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
 <title>배송 정보</title>
 </head>
 <body>
-	<jsp:include page="header.jsp" />
+	<jsp:include page="../header.jsp" />
 	<div class="jumbotron bg-warning">
 		<div class="container">
 			<h1 class="display-3">배송 정보</h1>

@@ -6,7 +6,7 @@
 <%
 	String id = request.getParameter("id");
 	if (id == null || id.trim().equals("")) {
-		response.sendRedirect("books.jsp");
+		response.sendRedirect("../books.jsp");
 		return;
 	}
 
@@ -14,7 +14,7 @@
 	
 	Book book = dao.getBookById(id);
 	if (book == null) {
-		response.sendRedirect("exceptionNoBookId.jsp");
+		response.sendRedirect("./exception/exceptionNoBookId.jsp");
 	}
 //-----여기까지는 addCart.jsp와 동일 
 

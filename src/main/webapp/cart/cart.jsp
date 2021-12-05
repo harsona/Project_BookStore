@@ -7,16 +7,14 @@
 <head>
 <meta charset="UTF-8">
 <title>장바구니</title>
-<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
-<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-<style>	h1 { font-family: 'Do Hyeon', sans-serif;} </style>
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
 <%
 	String cartId = session.getId();
 %>
 <title>장바구니</title>
 </head>
 <body>
-	<jsp:include page="header.jsp" />
+	<jsp:include page="../header.jsp" />
 	<div class="jumbotron bg-warning">
 		<div class="container">
 			<h1 class="display-3">장바구니</h1>
@@ -69,9 +67,9 @@
 					<th></th>
 				</tr>
 			</table>
-				<a href="./books.jsp" class="btn btn-warning"> &laquo; 쇼핑 계속하기</a>
+				<a href="../books.jsp" class="btn btn-warning"> &laquo; 쇼핑 계속하기</a>
 		</div>
 	</div>
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="../footer.jsp" />
 </body>
 </html>
