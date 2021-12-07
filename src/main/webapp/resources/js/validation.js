@@ -1,4 +1,4 @@
-function CheckAddProduct() { //1.기본 유효성 검사 (빈칸확인/길이제한/숫자여부)
+function CheckAddBook() { //1.기본 유효성 검사 (빈칸확인/길이제한/숫자여부)
 
 	var bookId = document.getElementById("bookId");
 	var bName = document.getElementById("bName");

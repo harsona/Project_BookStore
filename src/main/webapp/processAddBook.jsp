@@ -3,8 +3,10 @@
 <%@ page import="com.oreilly.servlet.*" %>
 <%@ page import="com.oreilly.servlet.multipart.*" %>
 <%@ page import="java.util.*" %>
-<%@	page import="dto.Book"%>
-<%@ page import="dao.BookRepository"%>
+<%@ page import="java.sql.*" %>
+<%@ include file="dbconnection.jsp"%>
+<%-- <%@	page import="dto.Book"%>
+<%@ page import="dao.BookRepository"%> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,8 +54,27 @@
 		Enumeration files = multi.getFileNames();
 		String fname = (String) files.nextElement();
 		String fileName = multi.getFilesystemName(fname);
-
-//2. addBook.jsp 폼 페이지에서 입력된 데이터를 저장하도록 BookRepository 클래스의 addBook()메소드 호출
+		
+//6. 기존 BookRepository 클래스의 addBook() 메소드를 이용해 데이터를 저장한 것을 MySQL 연동으로 변경
+		String sql = "insert into product values(?,?,?,?,?,?,?,?,?,?,?)";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, bookId);
+		pstmt.setString(2, bName);
+		pstmt.setString(3, bPrice);
+		pstmt.setString(4, description);
+		pstmt.setString(5, author);
+		pstmt.setString(6, publisher);
+		pstmt.setString(7, category);
+		pstmt.setString(8, bInStock); //왜 setInt로 하면 오류가 뜨는지?
+		pstmt.setString(9, releaseDate);
+		pstmt.setString(10,bType);
+		pstmt.setString(11, fileName);
+		pstmt.executeUpdate();
+		
+		if (pstmt != null) pstmt.close();
+	 	if (conn != null) conn.close();		
+	
+/* //2. addBook.jsp 폼 페이지에서 입력된 데이터를 저장하도록 BookRepository 클래스의 addBook()메소드 호출
 		BookRepository dao = BookRepository.getInstance();
 		
 		Book newBook = new Book();
@@ -69,9 +90,9 @@
 		newBook.setbType(bType);
 		newBook.setFilename(filename);
 
-		dao.addBook(newBook); //여기까지
+		dao.addBook(newBook); */
 		
-		response.sendRedirect("books.jsp");
+		response.sendRedirect("books.jsp"); 
 	%> 
 </body>
 </html>

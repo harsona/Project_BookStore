@@ -5,24 +5,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
-	rel="stylesheet">
-<style>
-	h1 {
-		font-family: 'Gugi', cursive;
-	}
-</style>
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"	rel="stylesheet">
+<style>	h1 {font-family: 'Gugi', cursive;}</style>
 <title>개발문고</title>
 </head>
 <body>
 	<%@ include file="header.jsp"%>
 
 	<%!String greeting = "개발문고";
-	String tagline = "<br>엄선한 IT 기술 서적들을 둘러보세요.<br><br><br><br>";%>
+	String tagline = "<br>엄선한 최신 서적들을 둘러보세요.<br><br><br><br>";%>
 
 	<div class="jumbotron bg-warning">
 		<!-- bg-primary text-light -->

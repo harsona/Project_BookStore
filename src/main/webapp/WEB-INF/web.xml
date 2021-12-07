@@ -23,6 +23,7 @@
       <web-resource-name>BookStore</web-resource-name>
       <description></description>
       <url-pattern>/addBook.jsp</url-pattern> <!-- 접근을 제한할 요청경로 -->
+      <url-pattern>/editBook.jsp</url-pattern> 
     </web-resource-collection>
     <auth-constraint>
       <description>권한 관리자명</description>
@@ -34,15 +35,15 @@
   <login-config> 
     <auth-method>FORM</auth-method>
     <form-login-config>
-      <form-login-page>/login.jsp</form-login-page>
-      <form-error-page>/login_failed.jsp</form-error-page>
+      <form-login-page>/member/login.jsp</form-login-page>
+      <form-error-page>/member/login_failed.jsp</form-error-page>
     </form-login-config>
   </login-config>
 
 <!-- 4. 오류가 발생했을 때 exceptionNoPage.jsp를 호출하도록 코드 작성-->
   <error-page> 
 	<error-code>404</error-code>
-	<location>/exceptionNoPage.jsp</location>>
+	<location>/exception/exceptionNoPage.jsp</location>>
   </error-page>
 
 <!-- 5. 필터 처리를 이용해 로그 기록하기 -->

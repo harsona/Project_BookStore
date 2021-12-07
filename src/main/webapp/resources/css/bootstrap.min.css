@@ -8,19 +8,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Gugi&family=IBM+Plex+Sans+KR&family=Nanum+Gothic&family=Noto+Sans+KR&family=Song+Myung&display=swap');
 
-h1 {
-	font-family: 'Do Hyeon', sans-serif;
-}
+* {	
+	font-family: 'Do Hyeon', sans-serif; 
+  }
+  
 
-/* * {
-	font-family: 'IBM Plex Sans KR', sans-serif;
-} */
 
 
 /* 
 <style> h1 { font-family: 'Do Hyeon', sans-serif; }</style>
 font-family: 'Gugi', cursive;
 font-family: 'Do Hyeon', sans-serif;
+font-family: 'IBM Plex Sans KR', sans-serif; 
 font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Noto Sans KR', sans-serif;
 font-family: 'Song Myung', serif; 
