@@ -6,8 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
-<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"	rel="stylesheet">
-<style>	h1 {font-family: 'Gugi', cursive;}</style>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Gugi&display=swap" rel="stylesheet">
 <title>개발문고</title>
 </head>
 <body>
@@ -16,11 +15,11 @@
 	<%!String greeting = "개발문고";
 	String tagline = "<br>엄선한 최신 서적들을 둘러보세요.<br><br><br><br>";%>
 
-	<div class="jumbotron bg-warning">
+	<div class="jumbotron  bg-warning">
 		<!-- bg-primary text-light -->
 		<div class="container">
-			<h1 class="display-2 text-center">
-				<%=greeting%>
+			<h1 class="display-2 text-center" name="title">
+				<p><%=greeting%></p>
 			</h1>
 		</div>
 	</div>
