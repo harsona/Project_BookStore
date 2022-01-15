@@ -5,6 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <script type="text/javascript">
 	function checkForm() {
 		if (!document.newMember.id.value) {
@@ -38,7 +39,7 @@
 			<div class="form-group  row">
 				<label class="col-sm-2 ">아이디</label>
 				<div class="col-sm-3">
-					<input name="id" type="text" class="form-control" placeholder="id" >
+					<input name="id" type="text" class="form-control" placeholder="ID" >
 				</div>
 			</div>
 			<div class="form-group  row">
@@ -56,7 +57,7 @@
 			<div class="form-group  row">
 				<label class="col-sm-2">성명</label>
 				<div class="col-sm-3">
-					<input name="name" type="text" class="form-control" placeholder="name" >
+					<input name="name" type="text" class="form-control" placeholder="Name" >
 				</div>
 			</div>
 			<div class="form-group  row">
@@ -68,8 +69,8 @@
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2">생일</label>
-				<div class="col-sm-4  ">
-					<input type="text" name="birthyy" maxlength="4" placeholder="년(4자)" size="6"> 
+				<div class="col-sm-5  ">
+					<input type="text" name="birthyy" maxlength="4" placeholder="년(4자)" size="4">년&nbsp;&nbsp;
 					<select name="birthmm">
 						<option value="">월</option>
 						<option value="01">1</option>
@@ -84,13 +85,14 @@
 						<option value="10">10</option>
 						<option value="11">11</option>
 						<option value="12">12</option>
-					</select> <input type="text" name="birthdd" maxlength="2" placeholder="일" size="4">
+					</select>월 &nbsp;&nbsp;
+					<input type="text" name="birthdd" maxlength="2" placeholder="일" size="2">일
 				</div>
 			</div>
 			<div class="form-group  row ">
 				<label class="col-sm-2">이메일</label>
 				<div class="col-sm-10">
-					<input type="text" name="mail1" maxlength="50">@ 
+					<input type="text" name="mail1" maxlength="10" size="8"> @ &nbsp; 
 					<select name="mail2">
 						<option>naver.com</option>
 						<option>daum.net</option>
@@ -101,7 +103,7 @@
 			</div>
 			<div class="form-group  row">
 				<label class="col-sm-2">전화번호</label>
-				<div class="col-sm-3">
+				<div class="col-sm-5">
 					<input name="phone" type="text" class="form-control" placeholder="phone" >
 
 				</div>
@@ -110,7 +112,6 @@
 				<label class="col-sm-2 ">주소</label>
 				<div class="col-sm-5">
 					<input name="address" type="text" class="form-control" placeholder="address">
-
 				</div>
 			</div>
 			<div class="form-group  row">
