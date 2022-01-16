@@ -7,6 +7,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <title>도서 상세 정보</title>
 <script type="text/javascript"> //자바스크립트로 핸들러함수 addToCart() 작성 추가
 	function addToCart() {
@@ -20,9 +21,9 @@
 </head>
 <body>
 	<jsp:include page="header.jsp" />
-	<div class="jumbotron bg-warning text-light">
+	<div class="jumbotron bg-warning">
 		<div class="container">
-			<h1 class="display-4">도서 상세 정보</h1>
+			<h1 class="display-4">도서 상세 페이지</h1>
 		</div>
 	</div>
 	<% 
@@ -38,7 +39,7 @@
 				<img src="E:/project/upload/<%=book.getFilename()%>" style="width:70%"/> 
 			</div>
 			<div class="col-md-6">
-				<h3><b><%=book.getbName()%></b></h3>
+				<p><h3><b><%=book.getbName()%></b></h3><br>
 				<%-- <p><%=book.getDescription()%> --%>
 				<p><b>도서코드</b> : <span class="badge badge-warning"><%=book.getBookId()%></span>
 				<p><b>저자</b> :	<%=book.getAuthor()%>

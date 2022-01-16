@@ -13,7 +13,7 @@
 	<%@ include file="header.jsp"%>
 
 	<%!String greeting = "개발문고";
-	String tagline = "<br>엄선한 최신 서적들을 둘러보세요.<br><br><br><br>";%>
+	String tagline = "<br>엄선한 최신 IT 서적들을 둘러보세요.<br><br><br>";%>
 
 	<div class="jumbotron  bg-warning">
 		<!-- bg-primary text-light -->
@@ -25,9 +25,33 @@
 	</div>
 	<div class="container">
 		<div class="text-center">
-			<h4><%=tagline%></h4>
+			<h3><%=tagline%></h3>
+			
+<!-- 메뉴 전체도서 / 자격증도서 / 수업교재 카테고리 추가 -->
+	<div class="container">
+		<div class="row" align="center">
+			<div class="col-md-4">
+				<div class="bookimage">
+				<a href="./books.jsp"><img src="./resources/images/b9791196918033.png" style="width:70%"/></a><br><br><br>
+				</div>
+				<h4><b>전체도서보기</b></h4><br>
+			</div>
+			<div class="col-md-4">
+				<div class="bookimage">
+				<a href="./bookLicense.jsp"><img src="./resources/images/b9788988474846.png" style="width:70%"/></a><br><br><br>
+				</div>
+				<h4><b>자격증</b></h4><br>
+			</div>
+			<div class="col-md-4">
+				<div class="bookimage">
+				<a href="./bookClass.jsp"><img src="./resources/images/b9788970509471.png" style="width:70%"/></a><br><br><br>
+				</div>
+				<h4><b>수업교재</b></h4><br>
+			</div>
+		</div>
+	</div><br><br>			
 			<%
-			response.setIntHeader("Refresh", 10);
+			response.setIntHeader("Refresh", 30);
 			Date day = new java.util.Date();
 			String am_pm;
 			int hour = day.getHours();

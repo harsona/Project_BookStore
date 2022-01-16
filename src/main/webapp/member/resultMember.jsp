@@ -4,6 +4,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <title>회원 정보</title>
 </head>
 <body>
@@ -20,15 +21,15 @@
 
 			if (msg != null) {
 				if (msg.equals("0"))
-					out.println(" <h2 class='alert alert-danger'>회원정보가 수정되었습니다.</h2>");
+					out.println(" <h2 class='alert alert-warning'><br>회원정보가<br><br>수정되었습니다.<br><br></h2>");
 				else if (msg.equals("1"))
-					out.println(" <h2 class='alert alert-danger'>회원가입을 축하드립니다.</h2>");
+					out.println(" <h2 class='alert alert-warning'><br>회원가입을<br><br>축하드립니다.<br><br></h2>");
 				else if (msg.equals("2")) {
 					String loginId = (String) session.getAttribute("sessionId");
-					out.println(" <h2 class='alert alert-danger'>" + loginId + "님 환영합니다</h2>");
+					out.println("<br><h2 class='alert alert-warning'>" + loginId + "님<br><br>환영합니다<br><br></h2>");
 				}				
 			} else {
-				out.println("<h2 class='alert alert-danger'>회원정보가 삭제되었습니다.</h2>");
+				out.println("<h2 class='alert alert-warning'><br>회원정보가<br><br>삭제되었습니다.<br><br></h2>");
 			}
 		%>
 	</div>	

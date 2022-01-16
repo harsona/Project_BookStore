@@ -5,6 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <script type="text/javascript" src="./resources/js/validation.js"></script>
 <title>신규 도서 등록</title>
 </head>
