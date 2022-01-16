@@ -24,7 +24,7 @@
 	<jsp:include page="/header.jsp" />
 	<div class="jumbotron bg-warning">
 		<div class="container">
-			<h1 class="display-3">회원 수정</h1>
+			<h1 class="display-3">회원정보수정</h1>
 		</div>
 	</div>
 

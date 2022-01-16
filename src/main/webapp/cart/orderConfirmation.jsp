@@ -63,7 +63,7 @@
 				주소 : <%	out.println(shipping_addressName);%>(<%	out.println(shipping_country);%>) <br>
 			</div>
 			<div class="col-4" align="right">
-				<p>	<em>배송일: <% out.println(shipping_shippingDate);%></em>
+				<p>	<em>전화번호: <% out.println(shipping_shippingDate);%></em>
 			</div>
 		</div>
 		<div>

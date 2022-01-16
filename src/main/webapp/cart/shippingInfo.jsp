@@ -25,14 +25,14 @@
 					<input name="name" type="text" class="form-control" />
 				</div>
 			</div>
-			<div class="form-group row">
-				<label class="col-sm-2">배송일</label>
+ 			<div class="form-group row">
+				<label class="col-sm-2">전화번호</label>
 				<div class="col-sm-3">
-					<input name="shippingDate" type="text" class="form-control" />(yyyy/mm/dd)
+					<input name="shippingDate" type="text" class="form-control" />
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">국가명</label>
+				<label class="col-sm-2">요청사항</label>
 				<div class="col-sm-3">
 					<input name="country" type="text" class="form-control" />
 				</div>
