@@ -34,6 +34,7 @@
 						<li class="nav-item"><a class="nav-link" href='<c:url value="/member/updateMember.jsp"/>'>회원정보수정</a>
 					</c:otherwise>
 				</c:choose>
+				<li class="nav-item"><a class="nav-link" href="<c:url value="/BoardListAction.do?pageNum=1"/>">게시판</a></li>
 				<li class="nav-item dropdown">
 			    	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">관리자모드</a>
 			   			<div class="dropdown-menu">
