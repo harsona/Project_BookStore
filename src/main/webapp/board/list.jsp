@@ -11,7 +11,8 @@
 %>
 <html>
 <head>
-<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <title>Board</title>
 <script type="text/javascript">
 	function checkForm() {	

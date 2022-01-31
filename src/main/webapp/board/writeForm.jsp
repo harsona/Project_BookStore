@@ -6,7 +6,8 @@
 %>
 <html>
 <head>
-<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <title>Board</title>
 </head>
 <script type="text/javascript">
@@ -41,28 +42,25 @@
 				value="${sessionId}">
 			<div class="form-group row">
 				<label class="col-sm-2 control-label" >성명</label>
-				<div class="col-sm-3">
-					<input name="name" type="text" class="form-control" value="<%=name %>"
-						placeholder="name">
+				<div class="col-sm-5">
+					<input name="name" type="text" class="form-control" placeholder="name"  value="<%=name %>">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2 control-label" >제목</label>
 				<div class="col-sm-5">
 
-					<input name="subject" type="text" class="form-control"
-						placeholder="subject">
+					<input name="subject" type="text" class="form-control" placeholder="subject">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2 control-label" >내용</label>
-				<div class="col-sm-8">
-					<textarea name="content" cols="50" rows="5" class="form-control"
-						placeholder="content"></textarea>
+				<div class="col-sm-5">
+					<textarea name="content" cols="50" rows="5" class="form-control" placeholder="content"></textarea>
 				</div>
 			</div>
 			<div class="form-group row">
-				<div class="col-sm-offset-2 col-sm-10 ">
+				<div class="col-sm-offset-2 col-sm-10">
 				 <input type="submit" class="btn btn-primary " value="등록 ">				
 					 <input type="reset" class="btn btn-primary " value="취소 ">
 				</div>
