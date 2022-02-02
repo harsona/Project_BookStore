@@ -28,7 +28,7 @@
 </script>
 <body>
 	<jsp:include page="../header.jsp" />
-	<div class="jumbotron">
+	<div class="jumbotron bg-warning">
 		<div class="container">
 			<h1 class="display-3">게시판</h1>
 		</div>
